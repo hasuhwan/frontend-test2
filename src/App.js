@@ -1,11 +1,9 @@
-import "./App.css";
-import FirstStep from "./FirstStep";
-import { order } from "./elements/mapping";
-const step = 0;
+import SquareDrawing from "./SquareDrawing";
+import { mapping } from "./data/mapping";
 function App() {
   return (
-    <div className="App w-full h-full bg-whiteColor p-[10px]">
-      <FirstStep step={step} order={order} />;
+    <div className="App w-full h-full grid grid-cols-4 grid-rows-4 gap-[4px] bg-whiteColor p-[10px]">
+      {mapping.value ? <SquareDrawing step={mapping} /> : null}
     </div>
   );
 }
