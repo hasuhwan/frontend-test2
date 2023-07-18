@@ -17,3 +17,11 @@ body {
   width: 600px;
   height: 600px;
 }
+@layer components {
+  .square-layout {
+    @apply w-full h-full grid grid-cols-4 grid-rows-4 gap-[4px];
+  }
+  .square-drawing {
+    @apply w-full h-full row-span-2 col-span-2 outline outline-4 outline-blackColor;
+  }
+}
